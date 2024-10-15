@@ -1,0 +1,166 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt]{src/altacv}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage[colorlinks]{hyperref}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[utf8]{inputenc} 
+
+% If using pdflatex:
+% \usepackage[T1]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+%
+
+% \renewcommand{\itemmarker}{{\small\textbullet}}
+% \renewcommand{\ratingmarker}{\faCircle}
+% \newcommand{\github}[1]{%
+%    \href{#1}{\faGithubSquare}%
+% }
+%% sample.bib contains your publications
+
+
+\geometry{left=1.25cm,right=1.25cm,top=0.5cm,bottom=0.5cm,columnsep=1.2cm}
+
+\input{src/utils.tex}
+
+\begin{document}
+
+\begin{paracol}{2}
+    \columnratio{0.9}
+    {\Huge\bfseries{\textcolor{black}{Baye Malick GNING}}}
+    \switchcolumn
+    \hfill \includegraphics[width=2.5cm]{images/logo-cs.png} % Adjust the width as needed
+\end{paracol}
+
+%%%%%%%%% Personal info
+\email{baye.gning@student-cs.fr}
+\phone{+33761132749}
+\location{Paris}
+\github{\href{https://github.com/bmalick}{GitHub}}
+\linkedin{\href{https://www.linkedin.com/in/baye-malick-gning-a61110179/}{Profile Linkedin}}
+
+\columnratio{0.5}
+
+\begin{paracol}{2}
+\cvsection{Experiences pertinentes}
+
+%%%%%%%%%%%%%% Companies logo
+\begin{textblock*}{1cm}(240pt,103pt)
+  {\includegraphics[height=0.6cm]{images/logo-edf.png}}
+\end{textblock*}
+\begin{textblock*}{1cm}(240pt,320pt)
+  \colorbox{innov-plus-color}{\includegraphics[height=0.6cm]{images/logo-innov-plus.png}}
+\end{textblock*}
+
+
+\cvevent{EDF · Internship}{Utilizing Hydraulic Maintenance Data from the Hydroelectric Facility with Textual Artificial Intelligence}{March-August 2024}{Grenoble, France}
+\begin{itemize}
+    \item Transformer Architecture
+    \item Fine-Tuning Large Language Models
+    \item Binary Text Classification
+    \item Multi-Label Text Classification
+    \item One-vs-Rest Models
+    \item Sentence Transformers
+\end{itemize}
+
+% \cvtag{Pandas}
+\cvtag{transformers}
+\cvtag{sentence\_transformers}
+\cvtag{PyTorch}
+\cvtag{Prodigy}
+\cvtag{pydoit}
+\cvtag{cleanlab}
+
+\divider
+
+\cvevent{Innov+ · Internship}{Emotion Prediction from a Video}{Jul-Dec 2023}{Gif-sur-Yvette, France}
+\begin{itemize}
+    % \item Innov+ : Computer vision and AI for vehicle interior monitoring
+    \item Emotion Classification
+    \item 3D Convolutions and SlowFast Architecture
+    \item Image Data Augmentation
+\end{itemize}
+\cvtag{Pandas}
+\cvtag{Tensorflow}
+\cvtag{OpenCV}
+\cvtag{Tmux}
+\cvtag{Conda}
+\cvtag{albumentations}
+
+\divider
+
+\cvevent{Project S8}{Medical Image Denoising}{Feb-Jun 2023}{Gif-sur-Yvette, France}
+\begin{itemize}
+    \item Proposed by the Data Science Department of CentraleSupélec
+    \item Data Augmentation
+    \item U-Net Architecture
+\end{itemize}
+\cvtag{OpenCV}
+\cvtag{Scikit-learn}
+\cvtag{TensorFlow}
+
+% \divider
+
+\switchcolumn
+
+\cvsection{Educational Background}
+\cvevent{}{CentraleSupélec}{2021-2025}{}
+\cvevent{}{Henri IV: Preparatory Classes for Grandes Écoles}{2019-2021}{}
+\cvevent{}{Lycée Scientifique d'Excellence de Diourbel}{2016-2019}{}
+
+\cvsection{Honors}
+\cvachievement{\faTrophy}{Senegalese General Competition 2019}{2nd Prize in Physical Sciences}
+\cvachievement{\faTrophy}{Junior Polytech EPT 2019}{2nd Prize in Mathematics}
+
+\cvsection{Certifications}
+\cvtag{Udemy: Complete Data Science Course}
+\cvtag{Udemy: 100DaysOfCode, Python Bootcamp}
+
+\cvsection{Technical Skills}
+%%%%%%%%%%%%%%%% Langages
+\cvtag{Python}
+\cvtag{SQL}
+\cvtag{C++}
+\cvtag{latex}
+
+%%%%%%%%%%%%%%%% Librairies
+\cvtag{Numpy}
+\cvtag{Pandas}
+\cvtag{Matplotlib}
+\cvtag{Seaborn}
+\cvtag{Plotly}
+% \cvtag{Tkinter}
+% \cvtag{Flask}
+% \cvtag{Turtle}
+% \cvtag{Selenium}
+\cvtag{Beautifulsoop}
+
+
+%%%%%%%%%%%%%%% Deep Learning
+\cvtag{Scikit-Learn}
+\cvtag{Tensorflow}
+\cvtag{PyTorch}
+\cvtag{transformers}
+
+%%%%%%%%%%%%%% Outils
+\cvtag{Git}
+\cvtag{Tmux}
+\cvtag{Conda}
+
+
+\divider
+
+\cvsection{Languages}
+\cvskill{Wolof}{5}
+\divider
+\cvskill{French}{5}
+\divider
+\cvskill{English}{4}
+\divider
+\cvskill{Spanish}{2}
+\end{paracol}
+
+\end{document}

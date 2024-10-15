@@ -1,0 +1,219 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt]{src/altacv}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage[colorlinks]{hyperref}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[utf8]{inputenc} 
+
+% If using pdflatex:
+% \usepackage[T1]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+%
+
+% \renewcommand{\itemmarker}{{\small\textbullet}}
+% \renewcommand{\ratingmarker}{\faCircle}
+% \newcommand{\github}[1]{%
+%    \href{#1}{\faGithubSquare}%
+% }
+%% sample.bib contains your publications
+
+
+\geometry{left=1.25cm,right=1.25cm,top=0.5cm,bottom=0.5cm,columnsep=1.2cm}
+
+\input{src/utils.tex}
+
+\begin{document}
+
+\begin{paracol}{2}
+    \columnratio{0.9}
+    {\Huge\bfseries{\textcolor{black}{Baye Malick GNING}}}
+    \switchcolumn
+    \hfill \includegraphics[width=2.5cm]{images/logo-cs.png} % Adjust the width as needed
+\end{paracol}
+
+%%%%%%%%% Personal info
+\email{baye.gning@student-cs.fr}
+\phone{+33761132749}
+\location{Paris}
+\github{\href{https://github.com/bmalick}{GitHub}}
+\linkedin{\href{https://www.linkedin.com/in/baye-malick-gning-a61110179/}{Profile Linkedin}}
+
+\columnratio{0.5}
+
+\begin{paracol}{2}
+\cvsection{Experiences pertinentes}
+
+%%%%%%%%%%%%%% Companies logo
+\begin{textblock*}{1cm}(240pt,103pt)
+  {\includegraphics[height=0.6cm]{images/logo-edf.png}}
+\end{textblock*}
+\begin{textblock*}{1cm}(240pt,320pt)
+  \colorbox{innov-plus-color}{\includegraphics[height=0.6cm]{images/logo-innov-plus.png}}
+\end{textblock*}
+
+
+\cvevent{EDF · Stage}{Exploitation des données hydrauliques de maintenance du parc hydraulique à l’aide d’Intelligence Artificielle textuelle}{Mars-Août 2024}{Grenoble, France}
+\begin{itemize}
+    \item Architecture Transformers
+    \item FineTuning Large Language Models
+    \item Classification textuelle binaire
+    \item Classification textuelle multilabel
+    \item Modèles One-vs-Rest
+    \item Sentence Transformers
+
+    % \item Tokeniseurs pour les LLMs
+\end{itemize}
+% \cvtag{Pandas}
+\cvtag{transformers}
+\cvtag{sentence\_transformers}
+\cvtag{PyTorch}
+\cvtag{Prodigy}
+\cvtag{pydoit}
+\cvtag{cleanlab}
+
+\divider
+
+\cvevent{Innov+ · Stage}{Prédiction d'émotions à partir d'une vidéo}{Juil-Dec 2023}{Gif-sur-Yvette, France}
+\begin{itemize}
+    % \item Innov+ : Vision par ordinateur et IA pour la surveillance de l'intérieur des véhicules
+    \item Classification des émotions
+    \item Convolutions 3D et architecture SlowFast
+    \item Image data augmentation
+\end{itemize}
+\cvtag{Pandas}
+\cvtag{Tensorflow}
+\cvtag{OpenCV}
+\cvtag{Tmux}
+\cvtag{Conda}
+\cvtag{albumentations}
+
+\divider
+
+% \cvevent{Coding Weeks}{Projet iArt : Reconnaissance visuelle de tableaux}{Nov 2022}{Gif-sur-Yvette, France}
+% \begin{itemize}
+%     \item Mini bootcamp de programmation
+%     % \item Projets de développement informatique
+%     \item Création d'une application web pour la reconnaissance de tableau
+% \end{itemize}
+% \cvtag{Flask}
+% \cvtag{Opencv}
+%
+% \divider
+
+\cvevent{Projet S8}{Débruitage d'images médicales}{Fév-Juin 2023}{Gif-sur-Yvette, France}
+\begin{itemize}
+    \item Proposé par le Pôle DataScience de CentraleSupélec
+    \item Data Augmentation
+    \item Architecture U-Net
+\end{itemize}
+\cvtag{Opencv}
+\cvtag{Scikit-learn}
+\cvtag{Tensorflow}
+
+\divider
+
+% \cvevent{Enseignement d'intégration}{Analyse de sentiments}{Juin 2022}{Gif-sur-Yvette, France}
+% \begin{itemize}
+%     \item Tweets scrappés avec l'API de Twitter sur le procés de Johnny Deep / Amber Heard
+%     \item Classification d'un tweet soutenant un des opposants du procés
+%     \item Réseaux de neurones récurrents
+%     \item Tokenization et lemmatization
+% \end{itemize}
+% \cvtag{Tweepy}
+% \cvtag{Pandas}
+% \cvtag{Seaborn}
+% \cvtag{Matplotlib}
+% \cvtag{Tensorflow}
+% \cvtag{nltk}
+%
+%
+% % \divider
+% % % \newpage
+%
+% % \cvevent{Projet Personnel}{Automatisation création de pages des matchs de football}{Mars-Juil 2023}{Gif-sur-Yvette, France}
+% % \begin{itemize}
+% %     \item Utilisation de l'API Notion
+% %     \item Web scraping
+% %     \item Programmation Orientée Objet
+% % \end{itemize}
+% % \cvtag{BeautifulSoup}
+% % \cvtag{requests}
+
+\switchcolumn
+
+\cvsection{Parcours Scolaire}
+\cvevent{}{CentraleSupélec}{2021-2025}{}
+\cvevent{}{Henri IV : Classes Préparatoires aux Grandes Écoles}{2019-2021}{}
+\cvevent{}{Lycée Scientifique d'Excellence de Diourbel}{2016-2019}{}
+
+\cvsection{Distinctions}
+\cvachievement{\faTrophy}{Concours Général Sénégalais 2019}{2e Prix de Sciences Physiques}
+\cvachievement{\faTrophy}{Junior Polytech EPT 2019}{2e Prix de Mathématiques}
+
+\cvsection{Certifications}
+\cvtag{Udemy : Complete Data Science Course}
+\cvtag{Udemy : 100DaysOfCode, Python Bootcamp}
+
+\cvsection{Compétences Tech}
+%%%%%%%%%%%%%%%% Langages
+\cvtag{Python}
+\cvtag{SQL}
+\cvtag{C++}
+\cvtag{latex}
+
+%%%%%%%%%%%%%%%% Librairies
+\cvtag{Numpy}
+\cvtag{Pandas}
+\cvtag{Matplotlib}
+\cvtag{Seaborn}
+\cvtag{Plotly}
+% \cvtag{Tkinter}
+% \cvtag{Flask}
+% \cvtag{Turtle}
+% \cvtag{Selenium}
+\cvtag{Beautifulsoop}
+
+
+%%%%%%%%%%%%%%% Deep Learning
+\cvtag{Scikit-Learn}
+\cvtag{Tensorflow}
+\cvtag{PyTorch}
+\cvtag{transformers}
+
+%%%%%%%%%%%%%% Outils
+\cvtag{Git}
+\cvtag{Tmux}
+\cvtag{Conda}
+
+
+\divider
+
+% % \cvsection{Livres Pertinents}
+% % \begin{itemize}
+% %     \item Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent
+% %     \item Dive into Deep Learning
+%     
+% % \end{itemize}
+%
+% % \cvsection{Codage}
+% % \cvtag{CodingGame}
+% % \cvtag{LeetCode}
+% % \cvtag{GeeksforGeeks}
+%
+% % \newpage
+%
+\cvsection{Langues}
+\cvskill{Wolof}{5}
+\divider
+\cvskill{Français}{5}
+\divider
+\cvskill{Anglais}{4}
+\divider
+\cvskill{Espagnol}{2}
+\end{paracol}
+
+\end{document}
