@@ -1,9 +1,20 @@
-\begin{textblock*}{1cm}(240pt,103pt)
+\ifthenelse{\equal{\lang}{fr}}{
+\begin{textblock*}{1cm}(250pt,185pt)
   {\includegraphics[height=0.6cm]{images/logo-edf.png}}
 \end{textblock*}
-\cvevent{EDF · Stage}{Exploitation des données hydrauliques de maintenance du parc hydraulique à l’aide d’Intelligence Artificielle textuelle}{Mars-Août 2024}{Grenoble, France}
+}{
+\begin{textblock*}{1cm}(250pt,175pt)
+  {\includegraphics[height=0.6cm]{images/logo-edf.png}}
+\end{textblock*}
+}
+
+\ifthenelse{\equal{\lang}{fr}}{
+\cvevent{EDF · Stage}{Classification des défaillances des turbines du parc hydraulique à l'aide de l'Intelligence Artificielle}{Mars-Août 2024}{Grenoble, France}
 \begin{itemize}
-    \item Architecture Transformers
+    \item Annotation des données textuelles relatives aux défaillances des turbines
+    \item Élaboration d'un guide méthodologique d'annotation
+    \item Fine-tuning du modèle CamemBERT
+    % \item Architecture Transformers
     % \item FineTuning Large Language Models
     % \item Classification textuelle binaire
     % \item Classification textuelle multilabel
@@ -18,3 +29,18 @@
 % \cvtag{Prodigy}
 % \cvtag{pydoit}
 % \cvtag{cleanlab}
+}{
+\cvevent{EDF · Internship}{Classification of turbine failures in the hydraulic power plant using Artificial Intelligence}{March-August 2024}{Grenoble, France}
+\begin{itemize}
+    \item Annotation of textual data related to turbine failures
+    \item Development of an annotation methodology guide
+    \item Fine-tuning of the CamemBERT model
+    % \item Transformer architecture
+    % \item Fine-tuning Large Language Models
+    % \item Binary text classification
+    % \item Multi-label text classification
+    % \item One-vs-Rest models
+    % \item Sentence Transformers
+    % \item Tokenizers for LLMs
+\end{itemize}
+}

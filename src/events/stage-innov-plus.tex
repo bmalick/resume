@@ -1,16 +1,46 @@
-\begin{textblock*}{1cm}(240pt,320pt)
-  \colorbox{innov-plus-color}{\includegraphics[height=0.6cm]{images/logo-innov-plus.png}}
+% Logo
+
+\ifthenelse{\equal{\lang}{fr}}{
+\begin{textblock*}{1cm}(250pt,325pt)
+  \colorbox{innov-plus-color}{\includegraphics[height=0.5cm]{images/logo-innov-plus.png}}
 \end{textblock*}
-\cvevent{Innov+ · Stage}{Prédiction d'émotions à partir d'une vidéo}{Juil-Dec 2023}{Gif-sur-Yvette, France}
-\begin{itemize}
-    \item Innov+ : Vision par ordinateur et IA pour la surveillance de l'intérieur des véhicules
-    % \item Classification des émotions
-    % \item Convolutions 3D et architecture SlowFast
-    % \item Image data augmentation
-\end{itemize}
-% \cvtag{Pandas}
-% \cvtag{Tensorflow}
-% \cvtag{OpenCV}
-% \cvtag{Tmux}
-% \cvtag{Conda}
-% \cvtag{albumentations}
+}{
+\begin{textblock*}{1cm}(250pt,305pt)
+  \colorbox{innov-plus-color}{\includegraphics[height=0.5cm]{images/logo-innov-plus.png}}
+\end{textblock*}
+}
+
+% Experience
+\ifthenelse{\equal{\lang}{fr}}{
+    \cvevent{Innov+ · Stage}{Prédiction d'émotions à partir de vidéos}{Juillet-Décembre 2023}{Gif-sur-Yvette, France}
+    \begin{itemize}
+        \item Etude de l'état de l'art sur la prédiction des émotions
+        \item Implémentation d'architectures de convolutions 3D issues d'articles de recherche
+        \item Prétraitement et des données vidéo techniques d'augmentation 
+        % \item Développement d'un pipeline de traitement vidéo pour l'extraction de caractéristiques pertinentes
+        % \item Optimisation des architectures basées sur les convolutions 3D et l'architecture SlowFast pour la capture de dynamiques temporelles
+        % \item Évaluation des performances du modèle à l'aide de métriques spécifiques (accuracy, confusion matrix, etc.), atteignant X\% de précision
+        % \item Classification des émotions
+        % \item Convolutions 3D et architecture SlowFast
+        % \item Image data augmentation
+    \end{itemize}
+    % \cvtag{Pandas}
+    % \cvtag{Tensorflow}
+    % \cvtag{OpenCV}
+    % \cvtag{Tmux}
+    % \cvtag{Conda}
+    % \cvtag{albumentations}
+}{
+    \cvevent{Innov+ · Internship}{Emotion Prediction from Videos}{July-December 2023}{Gif-sur-Yvette, France}
+    \begin{itemize}
+        \item Study of the state of the art in emotion prediction.
+        \item Implementation of 3D convolution architectures based on research articles
+        \item Preprocessing and technical augmentation of video data.
+        % \item Development of a video processing pipeline for extracting relevant features
+        % \item Optimization of architectures based on 3D convolutions and the SlowFast architecture for capturing temporal dynamics
+        % \item Evaluation of model performance using specific metrics (accuracy, confusion matrix, etc.), achieving X\% accuracy
+        % \item Emotion classification
+        % \item 3D convolutions and SlowFast architecture
+        % \item Image data augmentation
+    \end{itemize}
+}
