@@ -1,0 +1,24 @@
+name: Build Resume
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Set up TeX Live
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: src/main.tex
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume
+        path: src/main.pdf
