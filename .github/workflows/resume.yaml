@@ -17,10 +17,10 @@ jobs:
       uses: xu-cheng/latex-action@v3
       with:
         root_file: src/main.tex
-    - name: List files to check if resume.pdf is generated
-      run: ls -l
+    - name: Rename main.pdf to resume.pdf
+      run: mv main.pdf resume.pdf
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v3
       with:
         name: resume
-        path: build/resume.pdf
+        path: resume.pdf
