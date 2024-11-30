@@ -1,6 +1,7 @@
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[10pt]{src/altacv}
 
+
 \usepackage[colorlinks]{hyperref}
 \usepackage{paracol}
 \usepackage{xcolor}
@@ -15,35 +16,42 @@
 
 \geometry{top=0.5cm, bottom=0.5cm, columnsep=0.5cm}
 
-\input{src/utils.tex}
 
-\begin{document}
-
-\begin{paracol}{2}
-    \columnratio{0.9}
-    {\Huge\bfseries{\textcolor{black}{Baye Malick GNING}}}
-    \switchcolumn
-    \hfill \includegraphics[width=2.5cm]{images/logo-cs.png} % Adjust the width as needed
-\end{paracol}
-
-%%%%%%%%% Personal info
-\email{baye.gning@student-cs.fr}
-\phone{+33761132749}
-\github{\href{https://github.com/bmalick}{GitHub}}
-\linkedin{\href{https://www.linkedin.com/in/baye-malick-gning-a61110179/}{Profile Linkedin}}
-
+\input{src/utils}
+\input{src/commands}
 \input{src/profile}
-
-\columnratio{0.5}
-\begin{paracol}{2}
 \input{src/experience}
+\input{src/events/stage-edf}
+\input{src/events/stage-innov-plus}
 \input{src/projects}
-
-\switchcolumn
-
+\input{src/events/end-studies-project}
+\input{src/events/projet-s8}
+\input{src/events/tweetoscope}
 \input{src/academic-background}
 \input{src/tech-skills}
 \input{src/rest}
 
-\end{paracol}
+\begin{document}
+
+% PROFILE
+\profileHeaderType{\resumeType}
+\profileDescription{\resumeLang}
+
+\makeResumeBody{\resumeType}{
+    % EXPERIENCE
+    \makeExperience{\resumeType}{\resumeLang}
+    % PROJECTS
+    \makeProjects{\resumeType}{\resumeLang}
+
+    % Switch column in case ow type 1 resume
+    \ifthenelse{\equal{\resumeType}{1}}{ \switchcolumn } {}
+    % ACADEMIC BACKGROUND
+    \makeAcademicBackground{\resumeType}{\resumeLang}
+    % Technical Skills
+    \makeTechSkills{\resumeType}{\resumeLang}
+    % Rest
+    \makeRest{\resumeType}{\resumeLang}
+
+}
+
 \end{document}

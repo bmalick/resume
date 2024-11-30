@@ -1,7 +1,37 @@
-\ifthenelse{\equal{\lang}{fr}}{
-    \cvsection{Profil}
-    Étudiant en dernière année à CentraleSupélec, en spécialisation en Science des Données et de l'Information, avec un double diplôme en Master 2 de Mathématiques Fondamentales Appliquées à l'Université de Lorraine, je suis à la recherche d'un stage de fin d'étude en Machine Learning ou en Intelligence Artificielle pour une durée de 6 mois à partir d'Avril.
-}{
-    \cvsection{Profile}
-    Final-year student at CentraleSupélec, specializing in Data and Information Science, with a dual Master's degree in Applied Fundamental Mathematics from the University of Lorraine. I am seeking a six-month internship in Machine Learning or Artificial Intelligence starting in April.
+% #1: Resume Type, #2: Language
+
+\newcommand{\profileHeaderType}[1]{% #1: Resume Type
+    \ifthenelse{\equal{#1}{1}}{
+        \begin{paracol}{2}
+            \columnratio{0.9}
+            {\huge\bfseries{\textcolor{black}{Baye Malick GNING}}}
+            % \switchcolumn
+            % \hfill \includegraphics[width=2.5cm]{images/logo-cs.png} % Adjust the width as needed
+        \end{paracol}
+
+        \email{baye.gning@student-cs.fr}
+        \phone{+33761132749}
+        \github{\href{https://github.com/bmalick}{GitHub}}
+        \linkedin{\href{https://www.linkedin.com/in/baye-malick-gning-a61110179/}{Linkedin}}
+    }{
+
+        \begin{center}
+            {\huge\bfseries{\textcolor{black}{Baye Malick GNING}}} \\[0.3cm]
+            \email{\href{mailto:baye.gning@student-cs.fr}{baye.gning@student-cs.fr}}
+            \phone{+33761132749}
+            \github{\href{https://github.com/bmalick}{GitHub}}
+            \linkedin{\href{https://www.linkedin.com/in/baye-malick-gning-a61110179/}{Linkedin}}
+        \end{center}
+    }
 }
+
+\newcommand{\profileDescription}[1]{% #1: Language
+    \ifthenelse{\equal{#1}{fr}}{
+        \cvsection{Profil}
+        Étudiant en dernière année à CentraleSupélec, en spécialisation en Science des Données et de l'Information, avec un double diplôme en Master 2 de Mathématiques Fondamentales Appliquées à l'Université de Lorraine, je suis à la recherche d'un stage de fin d'étude en Machine Learning ou en Intelligence Artificielle pour une durée de 6 mois à partir d'Avril.
+    }{
+        \cvsection{Profile}
+        Final-year student at CentraleSupélec, specializing in Data and Information Science, with a dual Master's degree in Applied Fundamental Mathematics from the University of Lorraine. I am seeking a six-month internship in Machine Learning or Artificial Intelligence starting in April.
+    }
+}
+

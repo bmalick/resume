@@ -1,34 +1,48 @@
+\newcommand{\makeRest}[2]{% #1: Resume Type, #2: Language
 
-\ifthenelse{\equal{\lang}{fr}}{
-\cvsection{Langues}
-\cvskill{Français}{Langue maternelle}
-\divider
-\cvskill{Anglais}{Professionnel}
-\divider
-\cvskill{Wolof}{Langue maternelle}
-% \divider
-% \cvskill{Espagnol}{Intermédiaire}
-}{
-\cvsection{Languages}
-\cvskill{French}{Native language}
-\divider
-\cvskill{English}{Professional}
-\divider
-\cvskill{Wolof}{Native language}
-}
+    \ifthenelse{\equal{#2}{fr}}{
+        \cvsection{Langues}
+    }{\cvsection{Languages}}
+        
+    \ifthenelse{\equal{#1}{1}}{
+        \ifthenelse{\equal{#2}{fr}}{
+            \cvskill{Français}{Langue maternelle}
+            \divider
+            \cvskill{Anglais}{Professionnel}
+            \divider
+            \cvskill{Wolof}{Langue maternelle}
+            % \divider
+            % \cvskill{Espagnol}{Intermédiaire}
+            }{
+            \cvskill{French}{Native language}
+            \divider
+            \cvskill{English}{Professional}
+            \divider
+            \cvskill{Wolof}{Native language}
+        }
+    }{
+        \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+           \textbf{Français} & \ifthenelse{\equal{#2}{fr}}{Langue maternelle}{Native Langue} \\
+           \textbf{English} & \ifthenelse{\equal{#2}{fr}}{Professionnel}{Professional} \\
+           \textbf{Wolof} & \ifthenelse{\equal{#2}{fr}}{Langue maternelle}{Native Langue}
+        \end{tabular}
+    }
 
-\ifthenelse{\equal{\lang}{fr}}{
-\cvsection{Loisirs}
-\cvtag{Football}
-\cvtag{Lecture}
-\cvtag{Manga}
-\cvtag{Anime}
-\cvtag{Cuisine}
-}{
-\cvsection{Hobbies}
-\cvtag{Football}
-\cvtag{Reading}
-\cvtag{Manga}
-\cvtag{Anime}
-\cvtag{Cooking}
+    \ifthenelse{\equal{#2}{fr}}{
+        \cvsection{Loisirs}
+    }{ \cvsection{Hobbies} }
+
+    \ifthenelse{\equal{#2}{fr}}{
+        \cvtag{Football}
+        \cvtag{Lecture}
+        \cvtag{Manga}
+        \cvtag{Anime}
+        \cvtag{Cuisine}
+    }{
+        \cvtag{Football}
+        \cvtag{Reading}
+        \cvtag{Manga}
+        \cvtag{Anime}
+        \cvtag{Cooking}
+    }
 }

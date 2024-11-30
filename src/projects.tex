@@ -1,11 +1,9 @@
-\ifthenelse{\equal{\lang}{fr}}{
-\cvsection{Projets}}{
-\cvsection{Projects}}
+\newcommand{\makeProjects}[2]{% #1: Resume Type, #2: Language
+    \ifthenelse{\equal{#2}{fr}}{
+        \cvsection{Projets}
+    }{ \cvsection{Projects} }
 
-\input{src/events/end-studies-project.tex}
-\divider
-\input{src/events/projet-s8}
-\divider
-\input{src/events/tweetoscope}
-% \divider
-% \input{src/events/grind}
+    \makeEndStudiesProject{#1}{#2}
+    \makeSeightProject{#1}{#2}
+    \makeTweetoscope{#1}{#2}
+}

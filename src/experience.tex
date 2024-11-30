@@ -1,8 +1,8 @@
+\newcommand{\makeExperience}[2]{% #1: Resume Type, #2: Language
+    \ifthenelse{\equal{#2}{fr}}{
+        \cvsection{Experiences Professionnelles}
+    }{ \cvsection{Professional Experience} }
 
-\ifthenelse{\equal{\lang}{fr}}{
-\cvsection{Experiences Professionnelles}}{
-\cvsection{Professional Experience}}
-
-\input{src/events/stage-edf}
-\divider
-\input{src/events/stage-innov-plus}
+    \makeEdf{#1}{#2}
+    \makeInnovPlus{#1}{#2}
+}

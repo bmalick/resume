@@ -1,18 +1,14 @@
-% Logo
-
-\ifthenelse{\equal{\lang}{fr}}{
-\begin{textblock*}{1cm}(250pt,325pt)
-  \colorbox{innov-plus-color}{\includegraphics[width=1.5cm]{images/logo-innov-plus.png}}
-\end{textblock*}
-}{
-\begin{textblock*}{1cm}(250pt,305pt)
-  \colorbox{innov-plus-color}{\includegraphics[width=1.5cm]{images/logo-innov-plus.png}}
-\end{textblock*}
+\newcommand{\makeInnovPlus}[2]{% #1: Resume Type, #2: Language
+    \ifthenelse{\equal{#2}{fr}}{
+        \innovPlusFr{#1}}{\innovPlusEn{#1}}
 }
 
-% Experience
-\ifthenelse{\equal{\lang}{fr}}{
-    \cvevent{Innov+ · Stage}{Prédiction d'émotions à partir de vidéos}{Juillet-Décembre 2023}{Gif-sur-Yvette, France}
+\newcommand{\innovPlusFr}[1]{% #1: Resume Type
+    \ifthenelse{\equal{#1}{1}}{
+        \cvevent{\textbf{Innov+ · Stage}}{Prédiction d'émotions à partir de vidéos}{Juillet-Décembre 2023}{Gif-sur-Yvette, France}
+    }{
+        \textbf{Prédiction d'émotions à partir de vidéos} \hfill {\textbf{Stage Innov+}, Juillet-Décembre 2023, Gif-sur-Yvette}
+    }
     \begin{itemize}
         \item Etude de l'état de l'art sur la prédiction des émotions
         \item Implémentation d'architectures de convolutions 3D issues d'articles de recherche
@@ -30,8 +26,14 @@
     % \cvtag{Tmux}
     % \cvtag{Conda}
     % \cvtag{albumentations}
-}{
-    \cvevent{Innov+ · Internship}{Emotion Prediction from Videos}{July-December 2023}{Gif-sur-Yvette, France}
+}
+
+\newcommand{\innovPlusEn}[1]{% #1: Resume Type
+    \ifthenelse{\equal{#1}{1}}{
+        \cvevent{\textbf{Innov+ · Internship}}{Emotion Prediction from Videos}{July-December 2023}{Gif-sur-Yvette, France}
+    }{
+        \textbf{Emotion Prediction from Videos} \hfill {\textbf{Innov+ Intern}, July-December 2023, Gif-sur-Yvette}
+    }
     \begin{itemize}
         \item Study of the state of the art in emotion prediction.
         \item Implementation of 3D convolution architectures based on research articles
@@ -44,3 +46,4 @@
         % \item Image data augmentation
     \end{itemize}
 }
+

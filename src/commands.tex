@@ -1,0 +1,11 @@
+\newcommand{\makeResumeBody}[2]{% #1: Resume Type, #2: Language, #3: Content
+    \ifthenelse{\equal{#1}{1}}{
+        \columnratio{0.5}
+        \begin{paracol}{2}
+            #2 % Place the provided content in the columns
+        \end{paracol}
+    }{
+        #2
+    }
+
+}
