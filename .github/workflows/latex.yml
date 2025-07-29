@@ -28,7 +28,7 @@ jobs:
           mv resume-en.pdf pdfs/resume-en.pdf
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: PDFs
           path: pdfs
