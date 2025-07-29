@@ -1,0 +1,49 @@
+
+\documentclass{src/classes/resume}
+
+
+% Custom bullet points
+% \renewcommand{\labelitemi}{$\blacksquare$}
+
+% \input{src/resume/sane.tex}
+\input{src/resume/items.tex}
+\input{src/resume/experience.tex}
+\input{src/resume/education.tex}
+\input{src/resume/projects.tex}
+
+\begin{document}
+
+% Header
+\candidateheader{no-git}
+\candidatePresentationEn
+
+% \cvsection{Education}
+\cvsection{Parcours academique}
+\eduIngeEn
+\eduMasterEn
+\eduCpgeEn
+
+
+\cvsection{Experience}
+\xpMichelinEn
+\xpEdfEn
+\xpInnovplusEn
+
+\cvsection{Projets}
+\projectHoloEn
+\projectMlgrindEn
+\projectSemEightEn
+
+\vspace{0.3em}
+\cvsection{Compétences}
+\technicalSkillsEn
+
+\vspace{0.3em}
+\cvsection{Langues}
+\langagesSkillsEn
+
+\vspace{0.3em}
+\cvsection{Centres d'intérêt}
+\centerOfInterestEn
+
+\end{document}

@@ -1,9 +1,0 @@
-\newcommand{\makeProjects}[2]{% #1: Resume Type, #2: Language
-    \ifthenelse{\equal{#2}{fr}}{
-        \cvsection{Projets}
-    }{ \cvsection{Projects} }
-
-    \makeEndStudiesProject{#1}{#2}
-    \makeSeightProject{#1}{#2}
-    \makeTweetoscope{#1}{#2}
-}

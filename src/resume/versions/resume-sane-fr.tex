@@ -1,0 +1,156 @@
+\documentclass{src/classes/resume}
+
+\begin{document}
+
+% [Presentation]
+\setcandidatename{Mohamed Moustapha Sané GUISSÉ}
+\setcandidatetelephone{+33758956792}
+\setcandidateemail{mohamedsaneguisse@gmail.com}
+\setcandidategithub{}
+\setcandidatelinkedin{Linkedin @Mohamed Guissé}
+% TODO: correct likedin
+
+\setcandidatepresentation{
+Eleve ingénieur en mécanique\\
+Actuellement en fin d’études, je suis à la recherche d’un CDI à partir de septembre 2025 dans les domaines de la mécanique, de la CFD ou de l’énergie. Curieux, rigoureux et motivé, je suis prêt à m’investir pleinement dans de nouveaux projets.
+}
+
+
+% [Experience]
+
+\def\xpPhimeca{
+\makexp{
+% post=Stagiaire en mécanique des fluides numérique (CFD),
+    post=\textbf{Stagiaire},
+company=\textbf{PHIMECA},
+location=Cournon-d'Auvergne,
+duration=Avril 2025 - Sep 2025,
+desc={
+\begin{itemize}
+\item Benchmark de l'outil \textit{Ansys Discovery} pour simulations \textit{CFD} : mise en place de modèles numériques \textit{thermiques} et d'\textit{écoulement} autour d'un corps, post-traitement. \textit{Création}, \textit{préparation et réparation} de géométrie
+\item Benchmark de l'outil \textit{Ansys Fluent : maillage}, mise en place de modèle en régime  \textit{stationnaire et transitoire}, corps en rotation (\textit{MRF})
+\end{itemize}
+}}}
+
+\def\xpDpw{
+\makexp{
+    post=\textbf{Technicien de maintenance},
+company=\textbf{Dubai-Port-World Dakar},
+location={Dakar, Sénégal},
+duration=Août 2022,
+desc={
+Stage d'initiation dans le département maintenance - maintien en état de marche et la prévention des pannes des grues-portiques
+}}}
+
+% [EDUCATION]
+\def\eduEnsem{
+\makeedu{
+    diploma=\textbf{Ingénieur en Mécanique},
+school=\textbf{Ecole Nationale Supérieure d'Electricité et de Mécanique (ENSEM)},
+duration=2023 - 2025,
+location=Nancy,
+desc={
+\textit{Échanges Thermiques et Fluides : Transferts de chaleur et de masse (convection, conduction, rayonnement). Étude des cycles de Rankine, Carnot, et Brayton ; pompes à chaleurs, Mécanique des fluides, Écoulements supersoniques et combustion : machines à turbine et production d'énergie par combustion}\par
+\textit{Instrumentation et Métrologie : Vélocimétrie laser, thermographie infrarouge, microscopie thermique}
+}}}
+
+\def\eduDd{
+\makeedu{
+    diploma=\textbf{Ingénieur d'Etat en Mécanique (Double diplôme)},
+school=\textbf{ENSEM},
+duration=2021 - 2025,
+location={Casablanca, Maroc},
+desc={
+\textit{Conception mécanique et production intégrée}\par
+\textit{Production mécanique} : Cotation fonctionnelle, procédés d’usinage et fabrication\par
+\textit{Conception et calculs} : Dimensionnement des arbres, CAO, RDM, propriétés des matériaux (composites, alliages)\par
+\textit{Dessin technique} : Analyse de systèmes, contraintes de conception et production
+}}}
+
+\def\eduCpge{
+\makeedu{
+    diploma=\textbf{Classes préparatoires aux Grandes Ecole MPSI/MP},
+school=\textbf{Lycée Mohammed VI},
+duration=2019 - 2021,
+location={Kénitra, Maroc},
+desc=\textit{Deux (2) années de classes préparatoires aux grandes écoles. Programme intensif de préparation aux grandes écoles.}
+}}
+
+% [PROJECTS]
+\def\projectBE{
+\makeproject{
+title=\textbf{Bureau d'études},
+desc=\textit{Simulation CFD et étude aérodynamique de la capsule Urbanloop}
+}}
+
+\def\projectRecAcad{
+\makeproject{
+    title=\textbf{Projet de recherche académique},
+desc=\textit{Conception, automatisation de l'injection des gouttes dans un lévitateur acoustique}
+}}
+
+\def\projectEndStudies{
+\makeproject{
+    title=\textbf{Projet de fin d'année},
+desc=\textit{Conception sous Catia V5 d'un extracteur de roulement pneumatique}
+}}
+
+\def\projectMode{
+\makeproject{
+    title=\textbf{Modélisation des matériaux composites},
+desc=\textit{\textit{Simulations sous Abaqus du comportement des matériaux composites}}
+}}
+
+\def\technicalSkills{
+\noindent\textbf{Modélisation, résolution et calculs}: Programmation Python, MATLAB, Excel, VBA\\
+\textbf{Simulation éléments finis - FEA}: Abaqus, FlexPDE\\
+\textbf{Simulations CFD}: Suite Ansys - FLUENT\\
+\textbf{Conception assistée par ordinateur (CAO/CAD)}: CATIA V5 - CURA
+}
+
+\def\langagesSkills{
+\cvskill{Français}{Bilingue}
+\cvskill{Wolof}{Langue maternelle}
+\cvskill{Anglais}{TOEIC B2* - Dix (10) mois d’échange académique et culturel aux États Unis dans le cadre du programme KL-YES}
+}
+
+\def\centerOfInterest{
+\textbf{Forum Ensem Entreprise - Casablanca, Maroc} (Design graphique des affiches et cartes de visite, accompagnement exposants)\\
+\textbf{Club Ensem Aéro - Casablanca, Maroc}: recherche et assemblage de drônes\\
+\textbf{Aéronautique, automobile, technologie, basketball, course à pied}
+}
+
+
+% Header
+\candidateheader{no-git}
+\candidatepresentation
+
+% \cvsection{Education}
+\cvsection{Parcours académique}
+\eduEnsem
+\eduDd
+\eduCpge
+
+\cvsection{Expérience}
+\xpPhimeca
+\xpDpw
+
+\cvsection{Projets}
+\projectBE
+\projectRecAcad
+\projectEndStudies
+\projectMode
+
+\vspace{0.3em}
+\cvsection{Compétences}
+\technicalSkills
+
+\vspace{0.3em}
+\cvsection{Langues}
+\langagesSkills
+
+\vspace{0.3em}
+\cvsection{Centres d'intérêt}
+\centerOfInterest
+
+\end{document}

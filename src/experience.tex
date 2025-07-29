@@ -1,8 +1,0 @@
-\newcommand{\makeExperience}[2]{% #1: Resume Type, #2: Language
-    \ifthenelse{\equal{#2}{fr}}{
-        \cvsection{Experiences Professionnelles}
-    }{ \cvsection{Professional Experience} }
-
-    \makeEdf{#1}{#2}
-    \makeInnovPlus{#1}{#2}
-}
