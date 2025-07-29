@@ -1,0 +1,29 @@
+name: Build LaTeX Resume
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up LaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            src/resume/versions/resume-fr.tex
+            src/resume/versions/resume-en.tex
+
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-cv
+          path: cv.pdf
