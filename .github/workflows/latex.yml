@@ -2,9 +2,9 @@ name: Build LaTeX Resume
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -12,18 +12,23 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up LaTeX
-        uses: xu-cheng/latex-action@v4
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: |
             src/resume/versions/resume-fr.tex
             src/resume/versions/resume-en.tex
 
+      - name: PDFs dir
+        run: |
+          mkdir -p pdfs
+          mv resume-fr.pdf pdfs/resume-fr.pdf
+          mv resume-en.pdf pdfs/resume-en.pdf
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: compiled-cv
-          path: cv.pdf
+          name: PDFs
+          path: pdfs
