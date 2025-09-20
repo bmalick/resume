@@ -6,7 +6,7 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[margin=0.7cm]{geometry}
+\RequirePackage{geometry}
 \RequirePackage{enumitem}
 \RequirePackage{titlesec}
 \RequirePackage{url}

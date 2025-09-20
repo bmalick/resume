@@ -2,8 +2,6 @@
 SRC_DIR := src
 BUILD_DIR := compilations
 PDF_DIR := pdfs
-# DEKSTOP ?= $(HOME)/Dektop
-
 
 RESUME_NAME := resume
 RESUME_SRC_DIR := $(SRC_DIR)/resume/versions
@@ -27,7 +25,7 @@ resume:
 	@for file in $(RESUME_SRC); do \
 		name=$$(basename $$file .tex); \
 		echo "Compiling $$name..."; \
-		pdflatex -jobname=$$name -output-directory=$(RESUME_OUT) $$file; \
+		latexmk -pdf -jobname=$$name -outdir=$(RESUME_OUT) $$file; \
 		cp $(RESUME_OUT)/$$name.pdf $(PDF_DIR); \
 	done
 
@@ -36,13 +34,14 @@ cover:
 	@for file in $(COVER_SRC); do \
 		name=$$(basename $$file .tex); \
 		echo "Compiling $$name..."; \
-		pdflatex -jobname=$$name -output-directory=$(COVER_OUT) $$file; \
+		latexmk -pdf -jobname=$$name -outdir=$(COVER_OUT) $$file; \
 		cp $(COVER_OUT)/$$name.pdf $(PDF_DIR); \
 	done
 
+
 # Cleanup
 clean:
-	@rm -rf $(REPORT_OUT) $(MEETINGS_OUT)
+	@rm -rf $(PDF_DIR) $(BUILD_DIR)
 
 
 

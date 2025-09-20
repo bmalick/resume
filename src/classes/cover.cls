@@ -15,13 +15,13 @@
 
 \newcommand{\postName}{}
 \newcommand{\setpostname}[1]{\renewcommand{\postName}{#1}}
-% \newcommand{\name}{}
-% \newcommand{\setlower}[1]{\renewcommand{\name}{#1}}
-% \newcommand{\name}{}
-% \newcommand{\setlower}[1]{\renewcommand{\name}{#1}}
-% \newcommand{\name}{}
-% \newcommand{\setlower}[1]{\renewcommand{\name}{#1}}
-% \newcommand{\name}{}
-% \newcommand{\setlower}[1]{\renewcommand{\name}{#1}}
+\newcommand{\supervisorName}{}
+\newcommand{\setsupervisorname}[1]{\renewcommand{\supervisorName}{#1}}
+\newcommand{\labName}{}
+\newcommand{\setlabname}[1]{\renewcommand{\labName}{#1}}
+\newcommand{\researchTopic}{}
+\newcommand{\setreshearchtopic}[1]{\renewcommand{\researchTopic}{#1}}
+\newcommand{\companyName}{}
+\newcommand{\setcompanyname}[1]{\renewcommand{\companyName}{#1}}
 % \newcommand{\name}{}
 % \newcommand{\setlower}[1]{\renewcommand{\name}{#1}}
