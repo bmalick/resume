@@ -1,7 +1,11 @@
 /compilations/
 /pdfs/
-*.html
-*.css
 companies.md
 *.pdf
-
+*.txt
+/build
+/mtex-build
+/.mtex-build
+/logs-pdfs
+*.pdf
+/cover-versions

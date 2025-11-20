@@ -1,0 +1,72 @@
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'stats/**'
+      - 'machine-learning/**'
+      - 'all-notes/**'
+      - 'index.html'
+      - 'style.css'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdfs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Install minimal TeX Live
+    - name: Install minimal TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          texlive-latex-base \
+          texlive-latex-recommended \
+          texlive-latex-extra \
+          texlive-fonts-extra \
+          texlive-bibtex-extra \
+          texlive-lang-french \
+          latexmk \
+          texlive-science \
+          texlive-pictures \
+          texlive-humanities
+
+    # Install mTeX
+    - name: Install mTeX
+      run: |
+        git clone https://github.com/bmalick/mTeX.git
+        echo "$PWD/mTeX/tools" >> $GITHUB_PATH
+
+    # Compile LaTeX projects
+    - name: Compile LaTeX projects
+      run: |
+        mtex build resume-fr
+        mtex build resume-en
+
+
+    # Upload PDFs
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: pdfs
+        path: pdfs/*
+
+    # Create index.html inside pdfs/
+    - name: Create HTML index for PDFs
+      run: |
+        cp index.html pdfs/
+        cp style.css pdfs/
+
+    # Deploy pdfs/
+    - name: Deploy PDFs to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./pdfs
+        publish_branch: gh-pages
