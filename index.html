@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Documents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resume</h1>
+    
+    <ul>
+        <li><a href="resume-fr.pdf">Resume FR</a></li>
+        <li><a href="resume-en.pdf">Resume EN</a></li>
+    </ul>
+
+    <div class="footer">
+        Last updated: <span id="date"></span>
+    </div>
+
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
