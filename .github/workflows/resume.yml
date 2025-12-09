@@ -3,11 +3,8 @@ on:
     branches:
       - master
     paths:
-      - 'stats/**'
-      - 'machine-learning/**'
-      - 'all-notes/**'
-      - 'index.html'
-      - 'style.css'
+      - 'resume-fr/**'
+      - 'resume-en/**'
       - '.github/workflows/**'
 
 permissions:
